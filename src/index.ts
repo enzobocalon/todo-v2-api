@@ -8,7 +8,7 @@ dotenv.config();
 // Create an .env file and insert your mongodb url there
 // following: MONGODB_URI = ""
 // you can change your port
-const PORT = process.env.PORT || 3977;
+const PORT = process.env.PORT || 6793;
 mongoose.connect(process.env.MONGODB_URI as string)
   .then(() => {
     const app = express();
