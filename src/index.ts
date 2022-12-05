@@ -15,7 +15,8 @@ mongoose.connect(process.env.MONGODB_URI as string)
 
     app.use(cors({
       origin: '*',
-      methods: ['GET','POST','DELETE','PATCH']
+      methods: ['GET','POST','DELETE','PATCH'],
+      allowedHeaders: ['Content-Type', 'Authorization'],
     }));
     app.use(express.json());
     app.use(router);
