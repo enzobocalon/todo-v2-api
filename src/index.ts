@@ -7,7 +7,8 @@ dotenv.config();
 
 // Create an .env file and insert your mongodb url there
 // following: MONGODB_URI = ""
-const PORT = process.env.PORT as string | 3977;
+// you can change your port, the configuration below is for Railway
+const PORT = 3001;
 mongoose.connect(process.env.MONGODB_URI as string)
   .then(() => {
     const app = express();
@@ -20,7 +21,7 @@ mongoose.connect(process.env.MONGODB_URI as string)
     app.use(router);
 
     app.listen(PORT, () => {
-      console.log('🚀 Running server');
+      console.log('🚀 Running server on http://localhost:3001');
     });
 
   })
