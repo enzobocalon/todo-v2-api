@@ -14,8 +14,9 @@ mongoose.connect(process.env.MONGODB_URI as string)
     const app = express();
 
     app.use(cors({
-      origin: '*',
-      methods: ['GET','POST','DELETE','PATCH']
+      origin: 'https://react-todo-v2.vercel.app',
+      methods: ['GET','POST','DELETE','PATCH'],
+      allowedHeaders: '*'
     }));
     app.use(express.json());
     app.use(router);
